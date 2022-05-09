@@ -26,7 +26,7 @@ import math
 
 # assign window #
 win = visual.Window([1920, 1080], units='deg',
-                    monitor='T1', color='black', fullscr = True)
+                    monitor='T1', color='black', fullscr = False)
 win.setRecordFrameIntervals(True)
 win._refreshThreshold=1/60
 
@@ -41,8 +41,8 @@ expInfo['dateStr']= data.getDateStr() #add the current time
 #     core.quit()
 
 #make a text file to save data
-fileName = "MIG_GE_600Trials_1700dots" #+ expInfo['dateStr'] #"gorkemTestOnP7"
-
+fileName = "testRun_midnight" #+ expInfo['dateStr'] #"gorkemTestOnP7"
+loadFileName = "600_trials_17kDots_midnight.npy"
 
 timerClock = core.Clock()
 # Experiment Parameters #
@@ -149,7 +149,7 @@ def saveData():
 
 
 # paul
-randomFrameList_trial = numpy.load('600_trials_2kDots.npy')
+randomFrameList_trial = numpy.load(loadFileName)
 
 print(len(randomFrameList_trial))
 
