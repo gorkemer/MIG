@@ -41,7 +41,7 @@ expInfo['dateStr']= data.getDateStr() #add the current time
 #     core.quit()
 
 #make a text file to save data
-fileName = "600_trials_2kDots" #+ expInfo['dateStr'] #"gorkemTestOnP7"
+fileName = "600_trials_17kDots_midnight_2round" #+ expInfo['dateStr'] #"gorkemTestOnP7"
 
 
 timerClock = core.Clock()
@@ -133,8 +133,8 @@ def saveData():
     #===========================================
     # Save Data
     #===========================================
-    header = ["sharedMotionList", "moveDirList", "groupingHoriList","groupElementsShapeList", "cardinalChangeList", "targetShapeLocList", "targetHoriList", "targetMoveDirList", "targetShapeList", "targetExistenceList",     "groupingElementsSpeedList", "targetSpeedList" , "delayTimeList". "groupingDirectionsList" ]
-    rows = zip(sharedMotionList, moveDirList, groupingHoriList, groupElementsShapeList, cardinalChangeList, targetShapeLocList, targetHoriList, targetMoveDirList, targetShapeList, targetExistenceList,    groupingElementsSpeedList, targetSpeedList, delayTimeList. groupingDirectionsList)
+    header = ["sharedMotionList", "moveDirList", "groupingHoriList","groupElementsShapeList", "cardinalChangeList", "targetShapeLocList", "targetHoriList", "targetMoveDirList", "targetShapeList", "targetExistenceList",     "groupingElementsSpeedList", "targetSpeedList" , "delayTimeList",  "groupingDirectionsList" ]
+    rows = zip(sharedMotionList, moveDirList, groupingHoriList, groupElementsShapeList, cardinalChangeList, targetShapeLocList, targetHoriList, targetMoveDirList, targetShapeList, targetExistenceList,    groupingElementsSpeedList, targetSpeedList, delayTimeList, groupingDirectionsList)
     with open(fileName+'preloadParam.csv', 'w') as f:
         #create the csv writer
         writer = csv.writer(f)
